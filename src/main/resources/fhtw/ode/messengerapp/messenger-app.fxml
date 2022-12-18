@@ -72,7 +72,7 @@
                 <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
               </textFill>
             </Label>
-                  <Button fx:id="btn_testServerConnection" layoutX="14.0" layoutY="41.0" mnemonicParsing="false" onAction="#testServerConnection" text="Test Server Connection" />
+                  <Button fx:id="btn_connectToServer" layoutX="14.0" layoutY="41.0" mnemonicParsing="false" onAction="#connectToServer" text="Test Server Connection" />
                   <ListView layoutX="11.0" layoutY="76.0" prefHeight="461.0" prefWidth="200.0" />
           </children>
         </AnchorPane>
