@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+//TODO: Den Inhalt des Server Files nach jedem Start des Servers löschen
+
 public class ServerLogger {
     private File logFile;
     private BufferedWriter writer;

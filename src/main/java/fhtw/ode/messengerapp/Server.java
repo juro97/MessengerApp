@@ -12,6 +12,7 @@ import java.util.List;
  *   Client Target example:     /send Thomas "Hallo wie gehts?"
  */
 
+//TODO: Anhängen bzw. Entfernen der Protokoll-Commandos sollte automatisch im Hintergrund passieren
 //TODO: MessageSendingProtokoll könnte man noch besser gestalten, da aktuell keine Leerzeichen in der User-Nachricht sein dürfen
 
 public class Server {
@@ -57,11 +58,14 @@ public class Server {
                 // Accept incoming connections
                 Socket socket = server.accept();
 
+                /*
                 //Frage ab, ob der Client bereits mit dem Server verbunden ist
                 if(ClientSocketList.contains(socket)) {
                     logger.log("Client " + socket.getInetAddress() + " is already connected");
                     continue;
                 }
+                */
+
 
                 //Add Client Socket to Socket List
                 ClientSocketList.add(socket);

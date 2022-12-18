@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -16,18 +17,18 @@ import java.net.Socket;
 public class ClientController {
 
     //----------------------- Class Variables ---------------------------------------------------------
-    private Socket clientSocket;
+    private Socket clientSocket = new Socket();
 
     @FXML
     private Button btn_send;
     @FXML
     private Button btn_testServerConnection;
     @FXML
-    private TextArea txt_log;
-    @FXML
     private TextField txt_message;
     @FXML
-    private TextArea txt_receivedMessage;
+    private TextArea txt_chatWindow;
+    @FXML
+    private ListView lst_openChats;
 
 
     //----------------------- ClientController Methods ---------------------------------------------------------
@@ -47,7 +48,7 @@ public class ClientController {
         //Read Message from Message Field
         String message = txt_message.getText();
 
-        //Here Add the Protocol Header according to the target (Broadcast oder Client)
+        //TODO: Here Add the Protocol Header according to the target (Broadcast oder Client)
 
         // Send the message to the server
         OutputStream output = clientSocket.getOutputStream();
@@ -69,9 +70,9 @@ public class ClientController {
                         // Read the message sent by the server
                         String message = input.readLine();
 
-                        // Update the GUI with the message
+                        // TODO: Update the GUI with the message does not work properly
                         Platform.runLater(() -> {
-                            txt_log.appendText(message + "\n");
+                            txt_chatWindow.setText(message + "\n");
                         });
                     } catch (IOException e) {
                         e.printStackTrace();

@@ -1,0 +1,17 @@
+New log-file created
+Server at Port 4711
+New Client from: /127.0.0.1
+Started Thread for Client /127.0.0.1
+Client /127.0.0.1 sent => /broadcast Dasisteinkleinertest
+Broadcast message sent to Client: /127.0.0.1
+New Client from: /127.0.0.1
+Started Thread for Client /127.0.0.1
+Client /127.0.0.1 sent => /broadcast lsajfaskjcdf
+Broadcast message sent to Client: /127.0.0.1
+Broadcast message sent to Client: /127.0.0.1
+New Client from: /127.0.0.1
+Started Thread for Client /127.0.0.1
+Client /127.0.0.1 sent => /broadcast jlkasd
+Broadcast message sent to Client: /127.0.0.1
+Broadcast message sent to Client: /127.0.0.1
+Broadcast message sent to Client: /127.0.0.1
